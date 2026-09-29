@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Weatherly - Weather Dashboard</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Background decoration -->
+    <div class="background-circle circle-one"></div>
+    <div class="background-circle circle-two"></div>
+
+    <header class="navbar">
+        <div class="logo">
+            <span>☀️</span>
+            Weatherly
+        </div>
+
+        <button id="locationBtn" class="location-btn">
+            📍 Use My Location
+        </button>
+    </header>
+
+
+    <main class="container">
+
+        <!-- Welcome Section -->
+        <section class="welcome">
+            <p class="small-title">LIVE WEATHER DASHBOARD</p>
+
+            <h1>Check the Weather</h1>
+
+            <p class="subtitle">
+                Search any city to see current weather conditions,
+                temperature and forecast.
+            </p>
+
+
+            <!-- Search -->
+            <div class="search-box">
+
+                <input
+                    type="text"
+                    id="cityInput"
+                    placeholder="🔍 Search for a city..."
+                >
+
+                <button id="searchBtn">
+                    Search
+                </button>
+
+            </div>
+
+            <p id="errorMessage" class="error"></p>
+
+            <p id="loading" class="loading"></p>
+
+        </section>
+        <!-- SPLASH SCREEN -->
+<div id="splashScreen" class="splash-screen">
+
+    <div class="weather-animation">
+        <div class="sun"></div>
+
+        <div class="cloud cloud-one"></div>
+        <div class="cloud cloud-two"></div>
+    </div>
+
+    <h1>Weatherly</h1>
+
+    <p>Check the weather. Plan your day.</p>
+
+    <div class="loading-line">
+        <span></span>
+    </div>
+
+</div>
+
+
+        <!-- Weather Dashboard -->
+        <section id="weatherDashboard" class="dashboard hidden">
+
+            <!-- Main Weather Card -->
+            <div class="main-card">
+
+                <div class="weather-top">
+
+                    <div>
+                        <p class="label">CURRENT WEATHER</p>
+
+                        <h2 id="cityName">Hyderabad, India</h2>
+
+                        <p id="dateTime" class="date"></p>
+                    </div>
+
+                    <div id="weatherIcon" class="big-icon">
+                        ☀️
+                    </div>
+
+                </div>
+
+
+                <div class="temperature-section">
+
+                    <span id="temperature">--</span>
+                    <span class="degree">°C</span>
+
+                </div>
+
+                <h3 id="weatherDescription">
+                    Search a city
+                </h3>
+
+                <p id="feelsLike">
+                    Feels like --°C
+                </p>
+
+            </div>
+
+
+            <!-- Weather Information -->
+            <div class="info-grid">
+
+                <div class="info-card">
+                    <div class="info-icon">💧</div>
+
+                    <div>
+                        <p>Humidity</p>
+                        <h3 id="humidity">--%</h3>
+                    </div>
+                </div>
+
+
+                <div class="info-card">
+                    <div class="info-icon">💨</div>
+
+                    <div>
+                        <p>Wind Speed</p>
+                        <h3 id="windSpeed">-- km/h</h3>
+                    </div>
+                </div>
+
+
+                <div class="info-card">
+                    <div class="info-icon">🌅</div>
+
+                    <div>
+                        <p>Sunrise</p>
+                        <h3 id="sunrise">--</h3>
+                    </div>
+                </div>
+
+
+                <div class="info-card">
+                    <div class="info-icon">🌇</div>
+
+                    <div>
+                        <p>Sunset</p>
+                        <h3 id="sunset">--</h3>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <!-- Forecast -->
+            <div class="forecast-card">
+
+                <div class="section-heading">
+                    <div>
+                        <p class="label">WEATHER FORECAST</p>
+                        <h2>5-Day Forecast</h2>
+                    </div>
+                </div>
+
+
+                <div id="forecastContainer" class="forecast-container">
+
+                    <!-- Forecast cards will be created by JavaScript -->
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Initial Message -->
+        <section id="welcomeCard" class="welcome-card">
+
+            <div class="welcome-icon">
+                🌤️
+            </div>
+
+            <h2>Search for a city</h2>
+
+            <p>
+                Enter a city name above to get real-time weather information.
+            </p>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+        <p>Weatherly © 2026 | Powered by Open-Meteo API</p>
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
